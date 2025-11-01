@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/deleted_note.dart';
 import '../widgets/deleted_note_card.dart';
 
-// Silinen Notlar Ekranı
+
 class DeletedNotesScreen extends StatefulWidget {
   const DeletedNotesScreen({super.key});
 
@@ -163,8 +163,6 @@ class _DeletedNotesScreenState extends State<DeletedNotesScreen> {
               ),
             );
           }
-          // HATA DÜZELTMESİ: 'if' bloğundan sonra bir 'else' bloğu eklenmeli.
-          // Eğer silinmiş not varsa, bu blok çalışacak.
           else {
             final deletedNotes = snapshot.data!.docs;
             return ListView.builder(
@@ -198,3 +196,4 @@ class _DeletedNotesScreenState extends State<DeletedNotesScreen> {
     );
   }
 }
+
